@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -eu
+
+removeLines() {
+  for i in $(seq ${1}); do 
+    echo -en "\r\033[A\033[1K"
+  done
+}
+
+echo -e "hello,\nworld how are you, I'm pretty good?"
+
+sleep 1
+
+removeLines 2
+echo "how much terminal can a terminal chuck chuck?"
+
